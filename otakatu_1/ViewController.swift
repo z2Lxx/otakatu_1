@@ -70,7 +70,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
             searchOtakatu(keyword: searchWord)
         }
     }
-    
+    //test
     struct ItemJson: Codable {
         
         let name: String
