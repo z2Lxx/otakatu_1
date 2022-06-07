@@ -43,9 +43,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
         
         searchText.delegate = self
         
-        
         searchText.placeholder = "お探しの商品名を入力してください"
-        
         
         tableView.dataSource = self
         
