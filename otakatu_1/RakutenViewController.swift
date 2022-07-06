@@ -10,7 +10,8 @@ import SafariServices
 
 
 
-class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, SFSafariViewControllerDelegate, UIViewControllerTransitioningDelegate {
+
+class RakutenViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, SFSafariViewControllerDelegate, UIViewControllerTransitioningDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -55,7 +56,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var otakatuList : [ItemJson] = []
+    var otakatuList : [ProductParent] = []
     
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -70,31 +71,39 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
             searchOtakatu(keyword: searchWord)
         }
     }
-    //test
-    struct ItemJson: Codable {
-        
-        let name: String
-        
-        let price: Int
-        
-        let url: URL
-        
-        let image: Image
-        
-        let code: String
-        
-    }
     
-    struct Image: Codable {
-        
-        let medium: URL?
-        
-    }
     
     struct ResultJson: Codable {
-        
-        let hits:[ItemJson]?
+        let Products: [ProductParent]?
     }
+    
+    struct ProductParent: Codable {
+        let Product: Product
+    }
+    
+    struct Product: Codable {
+        let ProductDetails: [ProductDetails]
+        
+        let salesMaxPrice: Int
+        
+        let productUrlPC: URL
+        
+        let smallImageUrl: URL
+        
+        let productName :String
+    
+    }
+    
+    struct ProductDetails: Codable {
+        let detail: Detail
+    }
+    
+    struct Detail: Codable {
+        
+        let value: String?
+    }
+
+
     
     func searchOtakatu(keyword: String) {
         
@@ -102,12 +111,13 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
             return
         }
         
-        guard let req_url = URL(string: "https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?appid=dj00aiZpPTFFaGZqMTROaFhweCZzPWNvbnN1bWVyc2VjcmV0Jng9MmQ-&query=\(keyword_encode)") else {
+        guard let req_url = URL(string: "https://app.rakuten.co.jp/services/api/Product/Search/20170426?applicationId=1086629371249816189&format=json&keyword=\(keyword_encode)") else {
             
             return
         }
         
         print(req_url)
+
         
         
         let req = URLRequest(url: req_url)
@@ -133,15 +143,15 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
                 
                 print(json)
                 
-                if let items = json.hits {
-                    
+                if let items = json.Products{
+
                     self.otakatuList.removeAll()
-                    
-                    self.otakatuList = items
+
+                    self.otakatuList = json.Products ?? []
                     dump(self.otakatuList)
-                    
+
                     self.tableView.reloadData()
-                    
+
                 }
             } catch(let error) {
                 
@@ -166,20 +176,19 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "otakatuCell", for: indexPath)
         
-        cell.textLabel?.text = otakatuList[indexPath.row].name
-        
-        if let imageURL = otakatuList[indexPath.row].image.medium {
-            
+        cell.textLabel?.text = otakatuList[indexPath.row].Product.productName
+
+        let imageURL = otakatuList[indexPath.row].Product.smallImageUrl
+
             let data = try? Data(contentsOf: imageURL)
-            
+
             if let image = data{
-                
+
                 cell.imageView?.image = UIImage(data: image)
-                
+
             }
             
             
-        }
         
         return cell
         
@@ -189,7 +198,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let safariViewController = SFSafariViewController(url: otakatuList[indexPath.row].url)
+        let safariViewController = SFSafariViewController(url: otakatuList[indexPath.row].Product.productUrlPC)
         
         safariViewController.delegate = self
         
@@ -203,14 +212,14 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
         
     }
     
-    //    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-    //        let swipeCellA = UITableViewRowAction(style: .default, title: "追加") { action, index in
-    //            self.swipeContentsTap(content: "otakatuCell", index: index.row)
-    //        }
-    //
-    //        func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    //            return true
-    //        }
-    //
-    //    }
+//        func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//            let swipeCellA = UITableViewRowAction(style: .default, title: "追加") { action, index in
+//                self.swipeContentsTap(content: "otakatu2Cell", index: index.row)
+//            }
+//
+//            func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//                return true
+//            }
+//
+//        }
 }

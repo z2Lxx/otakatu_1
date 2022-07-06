@@ -16,6 +16,7 @@
 		4B2C4B5B282A3B0600D3556E /* otakatu_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C4B5A282A3B0600D3556E /* otakatu_1Tests.swift */; };
 		4B2C4B65282A3B0600D3556E /* otakatu_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C4B64282A3B0600D3556E /* otakatu_1UITests.swift */; };
 		4B2C4B67282A3B0600D3556E /* otakatu_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C4B66282A3B0600D3556E /* otakatu_1UITestsLaunchTests.swift */; };
+		4BEE424C2859ADB500EC1FE7 /* RakutenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE424B2859ADB500EC1FE7 /* RakutenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4B2C4B60282A3B0600D3556E /* otakatu_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otakatu_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2C4B64282A3B0600D3556E /* otakatu_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otakatu_1UITests.swift; sourceTree = "<group>"; };
 		4B2C4B66282A3B0600D3556E /* otakatu_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otakatu_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BEE424B2859ADB500EC1FE7 /* RakutenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakutenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4B2C4B43282A3B0400D3556E /* AppDelegate.swift */,
 				4B2C4B45282A3B0400D3556E /* SceneDelegate.swift */,
 				4B2C4B47282A3B0400D3556E /* ViewController.swift */,
+				4BEE424B2859ADB500EC1FE7 /* RakutenViewController.swift */,
 				4B2C4B49282A3B0400D3556E /* Main.storyboard */,
 				4B2C4B4C282A3B0600D3556E /* Assets.xcassets */,
 				4B2C4B4E282A3B0600D3556E /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				4B2C4B48282A3B0400D3556E /* ViewController.swift in Sources */,
 				4B2C4B44282A3B0400D3556E /* AppDelegate.swift in Sources */,
 				4B2C4B46282A3B0400D3556E /* SceneDelegate.swift in Sources */,
+				4BEE424C2859ADB500EC1FE7 /* RakutenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
