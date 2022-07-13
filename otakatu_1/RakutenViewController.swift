@@ -13,6 +13,7 @@ import SafariServices
 
 class RakutenViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, SFSafariViewControllerDelegate, UIViewControllerTransitioningDelegate {
     
+    @IBOutlet weak var RakutenButton: UIButton!
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         // 編集処理

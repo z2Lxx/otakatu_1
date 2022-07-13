@@ -48,21 +48,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UpV-G8-nJY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Pr-B3-IRC"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2Z7-u7-C5h"/>
                             <constraint firstItem="UpV-G8-nJY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3B7-Ir-Thv"/>
                             <constraint firstItem="UpV-G8-nJY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9R9-8P-IAp"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D4A-Cs-rHB"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HYv-bj-DKR"/>
                             <constraint firstItem="sel-gW-iFi" firstAttribute="top" secondItem="UpV-G8-nJY" secondAttribute="bottom" id="K3f-Aa-P6n"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="top" secondItem="UpV-G8-nJY" secondAttribute="bottom" id="MpM-Yl-Ni8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sel-gW-iFi" secondAttribute="bottom" id="Tng-AG-vlN"/>
                             <constraint firstItem="UpV-G8-nJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z33-KS-STC"/>
                             <constraint firstItem="sel-gW-iFi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="asF-Fp-u18"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="top" secondItem="UpV-G8-nJY" secondAttribute="bottom" id="gHM-zY-W69"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gNf-B4-ODy"/>
                             <constraint firstItem="sel-gW-iFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="imv-9g-N8f"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jTU-CA-mVT"/>
-                            <constraint firstItem="sel-gW-iFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kjT-hE-ufc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -146,22 +138,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="brp-U9-zq1">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brp-U9-zq1">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IPM-a0-Sfz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qDm-Ny-1xv">
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="otakatuCell" textLabel="7Xb-7V-ekP" style="IBUITableViewCellStyleDefault" id="0jg-X7-ATd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="otakatuCell" textLabel="oO7-zg-VZP" style="IBUITableViewCellStyleDefault" id="CWz-6h-ZRP">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0jg-X7-ATd" id="UTo-Fv-tlj">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CWz-6h-ZRP" id="zqZ-Zr-iAI">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Xb-7V-ekP">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oO7-zg-VZP">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
@@ -176,33 +170,148 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ydp-nH-n9D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="bottom" secondItem="ydp-nH-n9D" secondAttribute="bottom" id="4qY-sQ-Sm6"/>
-                            <constraint firstItem="brp-U9-zq1" firstAttribute="top" secondItem="ydp-nH-n9D" secondAttribute="top" id="8Km-Io-Frr"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="top" secondItem="brp-U9-zq1" secondAttribute="bottom" id="Etq-PC-7gT"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="trailing" secondItem="ydp-nH-n9D" secondAttribute="trailing" id="Iqm-21-73v"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="leading" secondItem="ydp-nH-n9D" secondAttribute="leading" id="O6g-Fc-3e6"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="trailing" secondItem="ydp-nH-n9D" secondAttribute="trailing" id="QDU-dg-2sv"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="top" secondItem="brp-U9-zq1" secondAttribute="bottom" id="WVh-Qy-3hf"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="leading" secondItem="ydp-nH-n9D" secondAttribute="leading" id="WsD-Nr-18K"/>
-                            <constraint firstItem="brp-U9-zq1" firstAttribute="leading" secondItem="ydp-nH-n9D" secondAttribute="leading" id="dXX-hv-dZb"/>
-                            <constraint firstItem="ydp-nH-n9D" firstAttribute="bottom" secondItem="IPM-a0-Sfz" secondAttribute="bottom" id="fNf-oa-OJn"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="trailing" secondItem="ydp-nH-n9D" secondAttribute="trailing" id="hYq-Vr-rUz"/>
-                            <constraint firstItem="brp-U9-zq1" firstAttribute="trailing" secondItem="ydp-nH-n9D" secondAttribute="trailing" id="lP0-Rr-eJp"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="bottom" secondItem="ydp-nH-n9D" secondAttribute="bottom" id="mbx-Zb-gH1"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="top" secondItem="brp-U9-zq1" secondAttribute="bottom" id="mny-eJ-15k"/>
-                            <constraint firstItem="IPM-a0-Sfz" firstAttribute="leading" secondItem="ydp-nH-n9D" secondAttribute="leading" id="nfd-F8-YPk"/>
-                            <constraint firstItem="brp-U9-zq1" firstAttribute="top" secondItem="ydp-nH-n9D" secondAttribute="top" id="vum-OP-LPw"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="searchText" destination="brp-U9-zq1" id="ig4-pd-Ahf"/>
-                        <outlet property="tableView" destination="IPM-a0-Sfz" id="Kf4-FU-5GI"/>
+                        <outlet property="tableView" destination="qDm-Ny-1xv" id="Vs2-Bi-SCy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHK-mc-aVz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="-700"/>
+            <point key="canvasLocation" x="353.62318840579712" y="-700.44642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gss-bk-UYU">
+            <objects>
+                <viewController id="nlM-wg-z0c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Bc-Ve-Qem">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-nW-0u0">
+                                <rect key="frame" x="140" y="160" width="134" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkF-D7-iwV">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYY-4C-Hdm">
+                                        <rect key="frame" x="67" y="0.0" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="296" translatesAutoresizingMaskIntoConstraints="NO" id="LJl-So-hoH">
+                                <rect key="frame" x="0.0" y="336" width="414" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ml1-DO-H7z">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjI-CU-k53">
+                                        <rect key="frame" x="355" y="0.0" width="59" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="296" translatesAutoresizingMaskIntoConstraints="NO" id="Rl8-s9-oAy">
+                                <rect key="frame" x="0.0" y="229" width="414" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MV-Vc-jkh">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL6-jF-P0U">
+                                        <rect key="frame" x="355" y="0.0" width="59" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wI0-Md-gbh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ScU-mX-bPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="296" id="YQY-in-WJ8">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BW-Bo-F79">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="28"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Button">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hW-O4-7tY">
+                            <rect key="frame" x="355" y="0.0" width="59" height="28"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Button">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="Pxq-Sj-qLK"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="-477" y="-700"/>
         </scene>
     </scenes>
     <resources>
